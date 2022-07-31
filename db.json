@@ -1,0 +1,39 @@
+{
+
+    "events":[
+        {
+          id: 578412,
+          category: "animal",
+          title: "Cat Adoption Day",
+          description: "Find Your new feling fried at this event.",
+          location: "Meow Town",
+          date: "January 28, 2022",
+          time: "9:00",
+          petsAllowed: true,
+          organizer: "Kat Laydee",
+        },
+        {
+          id: 578413,
+          category: "Electronic",
+          title: "Electronic Geeks",
+          description: "Find Your new feling fried at this event.",
+          location: "Meow Town",
+          date: "Feb 11, 2022",
+          time: "12:00",
+          petsAllowed: true,
+          organizer: "Kat Laydee",
+        },
+        {
+          id: 578414,
+          category: "Movies",
+          title: "Moveis Adict",
+          description: "Find Your new feling fried at this event.",
+          location: "Meow Town",
+          date: "Nov 7, 2022",
+          time: "15:00",
+          petsAllowed: true,
+          organizer: "Kat Laydee",
+        }
+      ]
+
+}
