@@ -1,8 +1,8 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/page">Card One</router-link>
+    <router-link :to="{name: 'Home'}">Home</router-link> |
+    <router-link :to="{name: 'About'}">About</router-link> |
+    <router-link :to="{name: 'Page'}">Card One</router-link>
   </nav>
   <router-view />
 </template>
