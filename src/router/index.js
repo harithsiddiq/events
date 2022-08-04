@@ -1,8 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
 import EventList from "../views/EventList.vue";
 import AboutView from "../views/AboutView.vue";
-import EventDetails from "../views/EventDetails.vue";
+import LayoutCom from '../views/event/LayoutCom.vue'
+import DetailsComponent from '../views/event/DetailsComponent.vue'
+import RegisterComponent from '../views/event/RegisterComponent.vue'
+import EditComponent from '../views/event/EditComponent.vue'
 import CardOne from "../components/CardOne.vue";
+import RegisterAuth from '../views/auth/RegisterCom.vue'
+import LoginAuth from '../views/auth/LoginCom.vue'
+import AuthLayout from '../views/auth/AuthLayout.vue'
 const routes = [
   {
     path: "/",
@@ -20,9 +26,39 @@ const routes = [
   {
     path: "/event/:id",
     props: true,
-    name: "EventDetails",
-    component: EventDetails
+    name: "LayoutCom",
+    component: LayoutCom,
+    children: [
+      {
+        path: "",
+        name: "EventDetails",
+        component: DetailsComponent
+      },
+      {
+        path: "auth",
+        name: "AuthLayout",
+        component: AuthLayout,
+        children: [
+          {
+            path: "register",
+            name: "RegisterAuth",
+            component: RegisterAuth
+          },
+          {
+            path: "login",
+            name: "LoginAuth",
+            component: LoginAuth
+          }
+        ]
+      },
+      {
+        path: "edit",
+        name: "Edit",
+        component: EditComponent
+      },
+    ]
   },
+
   {
     path: "/page",
     name: "Page",

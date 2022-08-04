@@ -1,8 +1,11 @@
 <template>
     <div>
-        <h1>{{ event.title }}</h1>
-        <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
-        <p>{{ event.description }}</p>
+        <nav>
+            <router-link :to="{name: 'EventDetails'}">EventDetails</router-link> |
+            <router-link :to="{name: 'AuthLayout'}">Register</router-link> |
+            <router-link :to="{name: 'Edit'}">Edit</router-link>
+        </nav>
+        <router-view :event="event"></router-view>
     </div>
 </template>
 
